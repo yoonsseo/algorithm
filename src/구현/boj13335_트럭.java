@@ -29,7 +29,7 @@ public class boj13335_트럭 {
         }
 
         int weight = 0; // 현재 다리 하중
-        for (int i = 0; i < w; i++) {
+        for (int i = 0; i < w; i++) { // 처음에 다리 길이만큼 큐를 초기화해두는 게 포인트!!
             queue.offer(0);
         }
 
