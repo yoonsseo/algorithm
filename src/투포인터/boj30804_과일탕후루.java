@@ -15,7 +15,6 @@ public class boj30804_과일탕후루 {
 
     static int start = 0;
     static int end = 0;
-    static boolean flag = true; // 구간 내 과일 종류가 두 개 이하
 
     static int[] pFruit = new int[10]; // 구간 내 과일 종류
     static int pKind = 0; // 구간 내 과일 종류 개수
@@ -76,24 +75,5 @@ public class boj30804_과일탕후루 {
         }
 
         System.out.println(max);
-    }
-
-    private static void twoPointer(int start, int end) {
-        for (int i = start; i <= end; i++) {
-            if (pFruit[skewer[i]] != 0) { // 해당 과일이 꼬치에 있음
-                count++;
-                max = Math.max(max, count);
-            } else { // 해당 과일 처음 등장
-                pFruit[skewer[i]]++;
-                pKind++;
-                if (pKind <= 2) {
-                    count++;
-                    max = Math.max(max, count);
-                } else { // 과일 세 종류 이상
-                    flag = false;
-                    return;
-                }
-            }
-        }
     }
 }
