@@ -6,6 +6,11 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class boj31418_스펀지 {
+    /*
+    범위 int가 아니라 long으로 설정이 중요,,
+
+    이동 가능한 칸의 개수만 세면 된다
+     */
     static long W;
     static long H;
     static int K; // 바이러스 수
