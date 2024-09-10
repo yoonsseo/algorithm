@@ -3,8 +3,6 @@ package backtracking;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.StringTokenizer;
 
 public class boj16938_캠프준비 {
@@ -37,8 +35,6 @@ public class boj16938_캠프준비 {
     static int[] A; // 문제별 난이도
 
     static int answer = 0;
-
-    static List<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -75,10 +71,8 @@ public class boj16938_캠프준비 {
 //        }
 
         for (int i = start; i < N; i++) {
-            list.add(A[i]);
             dfs(i + 1, level + A[i], count + 1,
                     Math.min(min, A[i]), Math.max(max, A[i]));
-            list.remove(Integer.valueOf(A[i]));
         }
 
     }
